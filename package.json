@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prepare": "npm run gcp-build",
-    "pretest": "npm run gcp-build",
     "build": "cd client && npm run build",
     "start": "nodemon app.js",
     "local": "concurrently --kill-others \"nodemon app.js\" \"npm run client\"",
