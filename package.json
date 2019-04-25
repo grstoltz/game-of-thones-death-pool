@@ -1,0 +1,26 @@
+{
+  "name": "got-death-pool",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "npm run gcp-build",
+    "pretest": "npm run gcp-build",
+    "build": "cd client && npm run build",
+    "start": "nodemon app.js",
+    "local": "concurrently --kill-others \"nodemon app.js\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "deploy": "gcloud app deploy"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^2.2.0",
+    "dotenv": "^7.0.0",
+    "express": "~4.16.0",
+    "mongoose": "^5.4.22",
+    "morgan": "~1.9.0",
+    "multer": "^1.4.1",
+    "nodemon": "^1.18.10"
+  }
+}
