@@ -117,7 +117,7 @@ router.post('/api/character/death/:id', (req, res) => {
 router.post('/api/character/wight/:id', (req, res) => {
   db.Prediction.updateMany(
     { 'predictions.characterId': req.params.id },
-    { $set: { 'predictions.$.wightWalkerResult': false } }
+    { $set: { 'predictions.$.wightWalkerResult': true } }
   )
     .then(result => res.send(result))
     .catch(err => res.status(422).json(err));

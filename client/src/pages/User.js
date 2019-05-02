@@ -54,17 +54,30 @@ class Board extends Component {
       if (wightWalkerPrediction !== null) {
         if (wightWalkerPrediction === wightWalkerResult) {
           resultsArr.push(
-            <span style={{ color: 'green' }}>, Becomes a Wight</span>
+            <span>
+              <span>,</span>
+              <span style={{ color: 'green' }}> Becomes a Wight</span>
+            </span>
           );
-        } else {
+        }
+        if (
+          wightWalkerPrediction !== wightWalkerResult &&
+          wightWalkerResult === true
+        ) {
           resultsArr.push(
-            <span style={{ color: 'red' }}>, Becomes a Wight</span>
+            <span>
+              <span>,</span>
+              <span style={{ color: 'red' }}> Becomes a Wight</span>
+            </span>
           );
         }
       } else if (wightWalkerPrediction === null) {
         if (wightWalkerResult === true) {
           resultsArr.push(
-            <span style={{ color: 'red' }}>, Becomes a Wight</span>
+            <span>
+              <span>,</span>
+              <span style={{ color: 'black' }}> Becomes a Wight</span>
+            </span>
           );
         }
       }
@@ -82,17 +95,26 @@ class Board extends Component {
       if (wightWalkerPrediction !== null) {
         if (wightWalkerPrediction === wightWalkerResult) {
           resultsArr.push(
-            <span style={{ color: 'green' }}>, Becomes a Wight</span>
+            <span>
+              <span>,</span>
+              <span style={{ color: 'green' }}> Becomes a Wight</span>
+            </span>
           );
         } else {
           resultsArr.push(
-            <span style={{ color: 'red' }}>, Becomes a Wight</span>
+            <span>
+              <span>,</span>
+              <span style={{ color: 'red' }}> Becomes a Wight</span>
+            </span>
           );
         }
       } else if (wightWalkerPrediction === null) {
         if (wightWalkerResult === true) {
           resultsArr.push(
-            <span style={{ color: 'red' }}>, Becomes a Wight</span>
+            <span>
+              <span>,</span>
+              <span style={{ color: 'black' }}> Becomes a Wight</span>
+            </span>
           );
         }
       }

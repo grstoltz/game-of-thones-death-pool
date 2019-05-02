@@ -30,17 +30,14 @@ GuessSchema.virtual('score').get(function() {
   } = this;
   let count = 0;
 
-  if (livesResult === null) {
-    return count;
-  }
   if (wightWalkerResponse === true && wightWalkerResult === true) {
-    return (count = count + 1);
+    count = count + 1;
   }
-  if ((wightWalkerResponse === true) & (wightWalkerResult === false)) {
-    return (count = count - 1);
+  if (wightWalkerResponse === true && !wightWalkerResult) {
+    count = count - 1;
   }
   if (livesResponse === livesResult) {
-    return (count = count + 1);
+    count = count + 1;
   }
   return count;
 });

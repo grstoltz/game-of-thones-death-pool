@@ -16,6 +16,7 @@ class Board extends Component {
     API.getPool(this.props.match.params.id)
       .then(res => {
         console.log(res);
+        res.data.sort((a, b) => b.score - a.score);
         this.setState({ data: res.data });
       })
       .catch(err => console.log(err));
@@ -60,7 +61,7 @@ class Board extends Component {
             style={{ lineHeight: '64px' }}
           />
         </Layout.Header>
-        <Layout.Content style={{ padding: '0 50px' }}>
+        <Layout.Content style={{ padding: '25px 50px' }}>
           <Table
             dataSource={this.renderResults(this.state.data)}
             columns={columns}
